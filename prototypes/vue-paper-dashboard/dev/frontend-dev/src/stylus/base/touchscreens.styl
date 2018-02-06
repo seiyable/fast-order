@@ -1,0 +1,32 @@
+// general styles for touch screen devices
+
+html
+  user-select: none
+
+img
+  -webkit-user-drag: none
+  -khtml-user-drag: none
+  -moz-user-drag: none
+  -o-user-drag: none
+  user-drag: none
+
+html, a
+  // cursor: none
+
+#touch-ripple
+  width: 0
+  height: 0
+  border-radius: 50%
+  background: rgba(255, 255, 255, 0.8)
+  transform: scale(0)
+  position: absolute
+  opacity: 1
+  z-index: 9999
+
+.touch-ripple-effect
+    animation: rippleDrop .3s linear
+
+@keyframes rippleDrop
+  100%
+    transform: scale(2)
+    opacity: 0
